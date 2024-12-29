@@ -6,23 +6,39 @@
   <title>Home</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 0;
-      background: url('https://source.unsplash.com/1920x1080/?technology,developer') no-repeat center center fixed;
-      background-size: cover;
+      background: linear-gradient(to right, #141e30, #243b55);
       color: #fff;
+      animation: fadeIn 2s ease-in-out;
+      overflow-x: hidden;
     }
     header {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 10px;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    header img {
+      width: 80%;
+      max-width: 1000px;
+      height: auto;
+      border-radius: 10px;
+      animation: slideIn 1.5s ease-out;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 20px;
+      animation: fadeDown 1.5s ease-out;
     }
     nav ul {
       list-style: none;
       display: flex;
       justify-content: center;
       padding: 0;
-      margin: 0;
+      margin: 20px 0;
+      background: #000;
+      border-radius: 5px;
+      animation: slideIn 2s ease-out;
     }
     nav ul li {
       margin: 0 15px;
@@ -30,25 +46,29 @@
     nav ul li a {
       color: #fff;
       text-decoration: none;
+      padding: 10px 15px;
       font-size: 18px;
+      font-weight: bold;
     }
     nav ul li a:hover {
-      text-decoration: underline;
+      background: #243b55;
+      border-radius: 5px;
     }
     main {
       text-align: center;
       padding: 50px 20px;
     }
-    h1 {
-      font-size: 3rem;
-    }
-    p {
+    main p {
       font-size: 1.2rem;
+      margin: 20px 0;
+      animation: fadeUp 1.5s ease-out;
     }
     footer {
-      background-color: rgba(0, 0, 0, 0.7);
-      padding: 20px;
+      background: #000;
+      color: #fff;
       text-align: center;
+      padding: 20px;
+      animation: fadeInUp 2s ease-in-out;
     }
     .social-icons {
       margin: 20px 0;
@@ -56,7 +76,6 @@
     .social-icons a {
       margin: 0 10px;
       text-decoration: none;
-      color: white;
       font-size: 24px;
     }
     .social-icons img {
@@ -64,21 +83,72 @@
       height: 32px;
       vertical-align: middle;
     }
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-      </ul>
-    </nav>
+    <img id="headerImage" src="WhatsApp Image 2024-07-15 at 02.06.37.jpeg" alt="Welcome Image">
+    <h1>Welcome to My Website</h1>
   </header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+    </ul>
+  </nav>
   <main>
-    <h1>Welcome to My Web Development Services</h1>
-    <p>Creating high-quality websites with a focus on functionality and design.</p>
+    <p>Hello! I'm Lyumugabe Joel, a passionate web developer and designer ready to bring your ideas to life.</p>
+    <p>Explore my website to learn more about me and the services I offer!</p>
   </main>
   <footer>
     <div class="social-icons">
@@ -97,5 +167,23 @@
     </div>
     <p>&copy; 2024 Lyumugabe Ngemanyi Joel. All rights reserved.</p>
   </footer>
+
+  <script>
+    // Slideshow for header image
+    const headerImages = [
+      "WhatsApp Image 2024-07-15 at 02.06.37.jpeg",
+      "WhatsApp Image 2024-07-15 at 18.32.14.jpeg",
+      "WhatsApp Image 2024-07-15 at 01.38.18.jpeg"
+    ];
+    let currentHeaderIndex = 0;
+
+    function changeHeaderImage() {
+      const headerImageElement = document.getElementById("headerImage");
+      headerImageElement.src = headerImages[currentHeaderIndex];
+      currentHeaderIndex = (currentHeaderIndex + 1) % headerImages.length;
+    }
+
+    setInterval(changeHeaderImage, 4000); // Change header image every 4 seconds
+  </script>
 </body>
 </html>
