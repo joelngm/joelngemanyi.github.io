@@ -3,87 +3,121 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Services</title>
+  <title>Services</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
       height: 100vh;
-      width: 100wh;
-      background-color: #f5f5f5;
-      color: #333;
-      overflow-x: hidden;
+      background: url('https://images.unsplash.com/photo-1518682074044-3b194b42fe71?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNjYzOXwwfDF8c2VhY2h8MXx8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8fHx8&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #eaeaea;
     }
+
     .container {
-      max-width: 800px;
-      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
       padding: 20px;
-      animation: fadeIn 1.5s ease-in-out;
+      margin: 20px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
     }
+
     header {
-      background: #333;
-      color: #fff;
-      padding: 20px 0;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
       text-align: center;
-      animation: slideInDown 1s ease-out;
+      color: #f1f1f1;
+      border-radius: 5px;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
+
     nav ul {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
       justify-content: center;
-      background-color: #333;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 5px;
     }
-    nav li {
+
+    nav ul li {
       margin: 0 10px;
     }
-    nav a {
+
+    nav ul li a {
       text-decoration: none;
-      color: #fff;
+      color: #eaeaea;
       padding: 10px 20px;
-      display: block;
-      border-radius: 5px;
-      transition: background 0.3s ease;
+      display: inline-block;
+      transition: 0.3s;
     }
-    nav a:hover {
-      background-color: #555;
+
+    nav ul li a:hover {
+      background: #0078ff;
+      color: white;
+      border-radius: 5px;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 5px;
+      overflow-y: auto;
+      text-align: center;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #eaeaea;
+      font-size: 1.5rem;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #0078ff;
+    }
+
+    .social-icons img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons img:hover {
       transform: scale(1.1);
     }
-    main {
-      background: #fff;
-      padding: 20px;
-      margin-top: 20px;
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+    }
+
+    .service-list li {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
       border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      animation: fadeInUp 1.2s ease-in-out;
-    }
-    footer {
-      text-align: center;
-      padding: 10px 0;
-      background: #333;
-      color: #fff;
-      margin-top: 20px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    video {
-      display: block;
-      margin: 20px auto;
-      max-width: 100%;
-      border-radius: 10px;
-      animation: fadeIn 2s ease-in-out;
-    }
-    ul {
-      padding-left: 20px;
-      animation: fadeInUp 1.5s ease-in-out;
-    }
-    ul li {
-      margin: 10px 0;
     }
   </style>
 </head>
@@ -101,18 +135,34 @@
     </nav>
     <main>
       <h2>What We Offer</h2>
-      <ul>
-        <li>Web Development</li>
-        <li>Web Designing</li>
+      <p>We provide a range of web development services tailored to meet your business and personal needs.</p>
+      
+      <ul class="service-list">
+        <li>Custom Website Development</li>
+        <li>Responsive Web Design</li>
+        <li>Content Management Systems (CMS)</li>
+        <li>E-commerce Solutions</li>
+        <li>SEO Optimization</li>
+        <li>Web Maintenance & Support</li>
       </ul>
-      <!-- Video plays automatically and loops -->
-      <video autoplay loop muted>
-        <source src="WhatsApp Video 2024-07-15 at 16.59.33.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+      
+      <div class="social-icons">
+        <a href="https://wa.me/+250730250487" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/joel_ngmy/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Instagram_logo_2016.svg" alt="Instagram">
+        </a>
+        <a href="mailto:lyumugabejoel@gmail.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Email_icon_2.svg" alt="Email">
+        </a>
+        <a href="https://www.linkedin.com/in/joel-ngemanyi/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo_2013.png" alt="LinkedIn">
+        </a>
+      </div>
     </main>
     <footer>
-      <p>&copy; 2024 Lyumugabe Joel. All rights reserved.</p>
+      <p>&copy; 2024 Lyumugabe Ngemanyi Joel. All rights reserved.</p>
     </footer>
   </div>
 </body>
