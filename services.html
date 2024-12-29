@@ -3,9 +3,82 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Social Icons with Animations</title>
+  <title>Services</title>
   <style>
-    /* CSS for Social Icons */
+    /* CSS styles */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1518682074044-3b194b42fe71?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNjYzOXwwfDF8c2VhY2h8MXx8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8fHx8&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      color: #eaeaea;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      text-align: center;
+      color: #f1f1f1;
+      border-radius: 5px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 5px;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #eaeaea;
+      padding: 10px 20px;
+      display: inline-block;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      background: #0078ff;
+      color: white;
+      border-radius: 5px;
+    }
+
+    main {
+      flex: 1;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 5px;
+      overflow-y: auto;
+      text-align: center;
+    }
+
+    footer {
+      font-size: 0.9rem;
+      text-align: center;
+      margin-top: 10px;
+    }
+
     .social-icons {
       display: flex;
       justify-content: center;
@@ -17,65 +90,99 @@
       text-decoration: none;
       color: #eaeaea;
       font-size: 1.5rem;
-      transition: 0.3s ease-in-out;
+      transition: 0.3s;
     }
 
     .social-icons a:hover {
       color: #0078ff;
-      transform: scale(1.2);
     }
 
     .social-icons img {
       width: 40px;
       height: 40px;
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s;
     }
 
     .social-icons img:hover {
       transform: scale(1.1);
     }
+
+    .service-list {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .service-list li {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
-
-  <!-- Static HTML version for non-React setup -->
-  <div class="social-icons">
-    <a href="https://wa.me/+250730250487" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/WhatsApp.svg" alt="WhatsApp">
-    </a>
-    <a href="https://www.instagram.com/joel_ngmy/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Instagram_logo_2016.svg" alt="Instagram">
-    </a>
-    <a href="mailto:lyumugabejoel@gmail.com" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Email_icon_2.svg" alt="Email">
-    </a>
-    <a href="https://www.linkedin.com/in/joel-ngemanyi/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo_2013.png" alt="LinkedIn">
-    </a>
+  <div class="container">
+    <header>
+      <h1>Our Services</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>What We Offer</h2>
+      <p>We provide a range of web development services tailored to meet your business and personal needs.</p>
+      
+      <!-- Service List -->
+      <ul class="service-list" id="serviceList">
+        <li>Web Design</li>
+        <li>Web Development</li>
+      </ul>
+      
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://wa.me/+250730250487" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.instagram.com/joel_ngmy/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Instagram_logo_2016.svg" alt="Instagram">
+        </a>
+        <a href="mailto:lyumugabejoel@gmail.com" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Email_icon_2.svg" alt="Email">
+        </a>
+        <a href="https://www.linkedin.com/in/joel-ngemanyi/" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo_2013.png" alt="LinkedIn">
+        </a>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2024 Lyumugabe Ngemanyi Joel. All rights reserved.</p>
+    </footer>
   </div>
 
+  <!-- Plain JavaScript for Animations -->
   <script>
-    // JavaScript for hover effect (optional for non-React environments)
-    const icons = document.querySelectorAll('.social-icons a');
-    icons.forEach(icon => {
-      icon.addEventListener('mouseover', () => {
-        icon.style.transform = 'scale(1.2)';
-      });
-      icon.addEventListener('mouseout', () => {
-        icon.style.transform = 'scale(1)';
-      });
-    });
+    // Animate the service list when the page loads
+    window.onload = function() {
+      const serviceList = document.getElementById("serviceList");
+      serviceList.style.opacity = 1;
+    };
   </script>
 
-  <!-- React.js Version for React Apps -->
-  <div id="root"></div>
-
+  <!-- React.js for Animations -->
   <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/react-spring@9.5.0/umd/react-spring.development.js"></script>
 
   <script type="text/javascript">
-    // React code for animated social icons
+    // React component for animated social icons
     const { useState } = React;
     const { useSpring, animated } = ReactSpring;
 
@@ -96,8 +203,6 @@
               style={normalStyle}
               src="https://upload.wikimedia.org/wikipedia/commons/6/65/WhatsApp.svg"
               alt="WhatsApp"
-              onMouseEnter={() => hoverStyle.transform = 'scale(1.2)'}
-              onMouseLeave={() => hoverStyle.transform = 'scale(1)'}
             />
           </a>
           <a href="https://www.instagram.com/joel_ngmy/" target="_blank">
@@ -105,8 +210,6 @@
               style={normalStyle}
               src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Instagram_logo_2016.svg"
               alt="Instagram"
-              onMouseEnter={() => hoverStyle.transform = 'scale(1.2)'}
-              onMouseLeave={() => hoverStyle.transform = 'scale(1)'}
             />
           </a>
           <a href="mailto:lyumugabejoel@gmail.com" target="_blank">
@@ -114,8 +217,6 @@
               style={normalStyle}
               src="https://upload.wikimedia.org/wikipedia/commons/6/60/Email_icon_2.svg"
               alt="Email"
-              onMouseEnter={() => hoverStyle.transform = 'scale(1.2)'}
-              onMouseLeave={() => hoverStyle.transform = 'scale(1)'}
             />
           </a>
           <a href="https://www.linkedin.com/in/joel-ngemanyi/" target="_blank">
@@ -123,8 +224,6 @@
               style={normalStyle}
               src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo_2013.png"
               alt="LinkedIn"
-              onMouseEnter={() => hoverStyle.transform = 'scale(1.2)'}
-              onMouseLeave={() => hoverStyle.transform = 'scale(1)'}
             />
           </a>
         </div>
@@ -133,6 +232,5 @@
 
     ReactDOM.render(<SocialIconsReact />, document.getElementById('root'));
   </script>
-
 </body>
 </html>
