@@ -11,17 +11,20 @@
       padding: 0;
       background-color: #f5f5f5;
       color: #333;
+      overflow-x: hidden;
     }
     .container {
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
+      animation: fadeIn 1.5s ease-in-out;
     }
     header {
       background: #333;
       color: #fff;
       padding: 20px 0;
       text-align: center;
+      animation: slideInDown 1s ease-out;
     }
     header h1 {
       margin: 0;
@@ -48,6 +51,7 @@
     }
     nav a:hover {
       background-color: #555;
+      transform: scale(1.1);
     }
     main {
       background: #fff;
@@ -55,24 +59,7 @@
       margin-top: 20px;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    ul {
-      padding: 0;
-      list-style-type: none;
-    }
-    ul li {
-      background: #f9f9f9;
-      margin: 10px 0;
-      padding: 10px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-    video {
-      display: block;
-      margin: 20px auto;
-      max-width: 100%;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      animation: fadeInUp 1.2s ease-in-out;
     }
     footer {
       text-align: center;
@@ -80,6 +67,21 @@
       background: #333;
       color: #fff;
       margin-top: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    video {
+      display: block;
+      margin: 20px auto;
+      max-width: 100%;
+      border-radius: 10px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    ul {
+      padding-left: 20px;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+    ul li {
+      margin: 10px 0;
     }
   </style>
 </head>
@@ -101,7 +103,7 @@
         <li>Web Development</li>
         <li>Web Designing</li>
       </ul>
-      <video width="640" height="360" controls>
+      <video controls>
         <source src="WhatsApp Video 2024-07-15 at 16.59.33.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
