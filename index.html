@@ -16,19 +16,17 @@
     }
     header {
       text-align: center;
-      padding: 20px 10px;
-    }
-    header img {
-      width: 80%;
-      max-width: 1000px;
-      height: auto;
-      border-radius: 10px;
-      animation: slideIn 1.5s ease-out;
+      padding: 40px 10px;
     }
     h1 {
-      font-size: 2.5rem;
-      margin-top: 20px;
+      font-size: 3rem;
+      margin: 20px 0;
       animation: fadeDown 1.5s ease-out;
+    }
+    h2 {
+      font-size: 2rem;
+      margin: 20px 0;
+      animation: fadeUp 1.5s ease-out;
     }
     nav ul {
       list-style: none;
@@ -72,16 +70,17 @@
     }
     .social-icons {
       margin: 20px 0;
+      animation: fadeIn 3s ease-out infinite alternate;
     }
     .social-icons a {
       margin: 0 10px;
       text-decoration: none;
-      font-size: 24px;
     }
     .social-icons img {
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 40px;
       vertical-align: middle;
+      animation: bounce 1.5s infinite;
     }
     /* Animations */
     @keyframes fadeIn {
@@ -132,12 +131,20 @@
         transform: translateY(0);
       }
     }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <img id="headerImage" src="WhatsApp Image 2024-07-15 at 02.06.37.jpeg" alt="Welcome Image">
     <h1>Welcome to My Website</h1>
+    <h2>Lyumugabe Joel - Web Developer</h2>
   </header>
   <nav>
     <ul>
@@ -167,23 +174,5 @@
     </div>
     <p>&copy; 2024 Lyumugabe Ngemanyi Joel. All rights reserved.</p>
   </footer>
-
-  <script>
-    // Slideshow for header image
-    const headerImages = [
-      "WhatsApp Image 2024-07-15 at 02.06.37.jpeg",
-      "WhatsApp Image 2024-07-15 at 18.32.14.jpeg",
-      "WhatsApp Image 2024-07-15 at 01.38.18.jpeg"
-    ];
-    let currentHeaderIndex = 0;
-
-    function changeHeaderImage() {
-      const headerImageElement = document.getElementById("headerImage");
-      headerImageElement.src = headerImages[currentHeaderIndex];
-      currentHeaderIndex = (currentHeaderIndex + 1) % headerImages.length;
-    }
-
-    setInterval(changeHeaderImage, 4000); // Change header image every 4 seconds
-  </script>
 </body>
 </html>
