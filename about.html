@@ -6,112 +6,77 @@
   <title>About</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1518682074044-3b194b42fe71?crop=entropy&cs=tinysrgb&fit=max&ixid=M3wzNjYzOXwwfDF8c2VhY2h8MXx8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8fHx8&ixlib=rb-1.2.1&q=80&w=1080') no-repeat center center fixed;
+      background: url('https://source.unsplash.com/1920x1080/?technology,programming') no-repeat center center fixed;
       background-size: cover;
-      font-family: Arial, sans-serif;
-      color: #eaeaea;
+      color: #fff;
     }
-
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      border-radius: 10px;
-      padding: 20px;
-      margin: 20px;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    }
-
     header {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 20px;
-      text-align: center;
-      color: #f1f1f1;
-      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 10px;
     }
-
     nav ul {
       list-style: none;
+      display: flex;
+      justify-content: center;
       padding: 0;
       margin: 0;
-      display: flex;
-      justify-content: center;
-      background-color: rgba(0, 0, 0, 0.8);
-      border-radius: 5px;
     }
-
     nav ul li {
-      margin: 0 10px;
+      margin: 0 15px;
     }
-
     nav ul li a {
+      color: #fff;
       text-decoration: none;
-      color: #eaeaea;
-      padding: 10px 20px;
-      display: inline-block;
-      transition: 0.3s;
+      font-size: 18px;
     }
-
     nav ul li a:hover {
-      background: #0078ff;
-      color: white;
-      border-radius: 5px;
+      text-decoration: underline;
     }
-
     main {
-      flex: 1;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 5px;
-      overflow-y: auto;
       text-align: center;
+      padding: 50px 20px;
     }
-
+    img {
+      width: 200px;
+      height: auto;
+      border-radius: 50%;
+      margin: 20px 0;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+    }
     footer {
-      font-size: 0.9rem;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 20px;
       text-align: center;
-      margin-top: 10px;
     }
-
     .social-icons {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
+      margin: 20px 0;
     }
-
     .social-icons a {
       margin: 0 10px;
       text-decoration: none;
-      color: #eaeaea;
-      font-size: 1.5rem;
-      transition: 0.3s;
+      color: white;
+      font-size: 24px;
     }
-
-    .social-icons a:hover {
-      color: #0078ff;
-    }
-
     .social-icons img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.3s;
-    }
-
-    .social-icons img:hover {
-      transform: scale(1.1);
+      width: 32px;
+      height: 32px;
+      vertical-align: middle;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>About Me</h1>
-    </header>
+  <header>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
@@ -119,27 +84,34 @@
         <li><a href="services.html">Services</a></li>
       </ul>
     </nav>
-    <main>
-      <h2>My Name is Lyumugabe Joel</h2>
-      <p>I live in Rwanda and am currently studying Business & Information Technology at the University of Kigali. I also have a background in Mathematics, Physics, and Computer Science. I'm here to help you with web-related needs.</p>
-      <div class="social-icons">
-        <a href="https://wa.me/+250730250487" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/WhatsApp.svg" alt="WhatsApp">
-        </a>
-        <a href="https://www.instagram.com/joel_ngmy/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Instagram_logo_2016.svg" alt="Instagram">
-        </a>
-        <a href="mailto:lyumugabejoel@gmail.com" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Email_icon_2.svg" alt="Email">
-        </a>
-        <a href="https://www.linkedin.com/in/joel-ngemanyi/" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo_2013.png" alt="LinkedIn">
-        </a>
-      </div>
-    </main>
-    <footer>
-      <p>&copy; 2024 Lyumugabe Ngemanyi Joel. All rights reserved.</p>
-    </footer>
-  </div>
+  </header>
+  <main>
+    <h1>About Me</h1>
+    <img src="WhatsApp Image 2024-07-15 at 02.06.37.jpeg" alt="My Picture">
+    <p>
+      My name is Lyumugabe Joel, and I live in Rwanda. I am a university student 
+      studying Business & Information Technology at the University of Kigali. I am 
+      passionate about web development and committed to delivering high-quality websites 
+      tailored to your needs. Feel free to explore my services and connect with me through 
+      the links below.
+    </p>
+  </main>
+  <footer>
+    <div class="social-icons">
+      <a href="https://wa.me/+250730250487" target="_blank" title="WhatsApp">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+      </a>
+      <a href="https://www.linkedin.com/in/your-profile" target="_blank" title="LinkedIn">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733561.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/your-profile" target="_blank" title="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+      </a>
+      <a href="mailto:your-email@example.com" target="_blank" title="Email">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+      </a>
+    </div>
+    <p>&copy; 2024 Lyumugabe Ngemanyi Joel. All rights reserved.</p>
+  </footer>
 </body>
 </html>
